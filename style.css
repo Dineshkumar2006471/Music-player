@@ -1,3 +1,47 @@
+/* 3D Particle Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #1fd1f9, #fffd82);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(white, transparent);
+  animation: rotateParticles 20s linear infinite;
+  opacity: 0.2;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+@keyframes rotateParticles {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  50% { transform: rotateX(180deg) rotateY(180deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Existing gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
 /* Background Animation */
 body {
   margin: 0;
