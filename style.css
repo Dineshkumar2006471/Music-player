@@ -1,0 +1,92 @@
+/* Background Animation */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #1fd1f9, #fffd82);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Music Player Styles */
+.player-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.song-info {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  color: #ff6ec4;
+}
+
+.progress-container {
+  width: 100%;
+  background: #444;
+  height: 8px;
+  border-radius: 5px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.progress {
+  background: #ff6ec4;
+  height: 8px;
+  width: 0%;
+  border-radius: 5px;
+}
+
+#volume {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.playlist {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.playlist li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
